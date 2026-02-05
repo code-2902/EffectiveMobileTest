@@ -4,7 +4,7 @@
 ## Задание 2.
 **задание_2_спецификация_запроса_и_ответа_swagger.json** *и* **задание_2_спецификация_запроса_и_ответа_swagger.yaml** *- Это спецификация REST API запроса и ответа, написанная в swagger editor*
 
-**https://swagger.serveousercontent.com/** *- ссылка на опубликованную в интернет спецификацию в swagger editor*
+**https://swagger.serveousercontent.com/** *- ссылка на опубликованную в интернет спецификацию в swagger editor (ссылка работает, если swagger editor запущен в терминале на моём хосте)*
 
 **req.py** *- код для примера получения данных в формате JSON из внешнего ресурса* (*тестовый URL* **https://code-2902.github.io/CHECKER/**)
 
