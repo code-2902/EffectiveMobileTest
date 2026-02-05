@@ -1,0 +1,42 @@
+[
+    {
+        "name": "METRO",
+        "delivery": {
+            "type": "Ближайшая доставка",
+            "from": "2026-02-03T21:00:00+00:00",
+            "to": "2026-02-03T23:00:00+00:00"
+        },
+        "image": "",
+        "url": "https://online.metro-cc.ru/"
+    },
+    {
+        "name": "Ашан",
+        "delivery": {
+            "type": "Ближайшая доставка",
+            "from": "2026-02-03T18:00:00+00:00",
+            "to": "2026-02-03T20:00:00+00:00"
+        },
+        "image": "",
+        "url": "https://www.auchan.ru/?utm_referrer=https%3A%2F%2Fwww.google.com%2F"
+    },
+    {
+        "name": "ВкусВилл",
+        "delivery": {
+            "type": "Быстрая доставка",
+            "from": "PT20M",
+            "to": "PT60M"
+        },
+        "image": "",
+        "url": "https://vkusvill.ru/"
+    },
+    {
+        "name": "ВИКТОРИЯ",
+        "delivery": {
+            "type": "Ближайшая доставка",
+            "from": "2026-02-03T17:00:00+00:00",
+            "to": "2026-02-03T19:00:00+00:00"
+        },
+        "image": "",
+        "url": "https://victoria-group.ru/info/dostavka/"
+    }
+]

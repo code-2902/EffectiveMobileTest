@@ -1,0 +1,117 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "description": "Описание REST API запроса и ответа для получения списка магазинов-партнёров",
+    "title": "Магазины-партнёры",
+    "version": "0.0.1"
+  },
+  "servers": [
+    {
+      "url": "hhtps://pertushkazelenaia.ru/api/v1"
+    }
+  ],
+  "paths": {
+    "/partnershops": {
+      "get": {
+        "summary": "Метода получения списка магазинов-партнёров",
+        "tags": [
+          "Магазины-партнёры"
+        ],
+        "responses": {
+          "200": {
+            "description": "Успешный ответ со списком магазинов-партнёров",
+            "content": {
+              "application/json": {
+                "$ref": "#/components/schemas/shops"
+              }
+            }
+          },
+          "default": {
+            "description": "Любые ошибки",
+            "content": {
+              "application/json": {
+                "$ref": "#/components/schemas/error"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "shop": {
+        "type": "object",
+        "required": [
+          "link",
+          "name",
+          "delivery",
+          "from",
+          "to",
+          "image"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "link": {
+            "type": "string",
+            "description": "Ссылка на сайт магазина, является контейнером для остальных обязательных атрибутов объекта. По клику происходит переход на сайт",
+            "example": "https://vkusvill.ru/"
+          },
+          "name": {
+            "type": "string",
+            "example": "ВкусВилл"
+          },
+          "delivery": {
+            "type": "string",
+            "examples": [
+              "Ближайшая доставка",
+              "Быстрая доставка"
+            ]
+          },
+          "from": {
+            "type": "string",
+            "examples": [
+              "2026-02-03T21:00:00.000Z",
+              "PT20M"
+            ]
+          },
+          "to": {
+            "type": "string",
+            "examples": [
+              "2026-02-03T21:00:00.000Z",
+              "PT20M"
+            ]
+          },
+          "image": {
+            "type": "binary",
+            "summary": "Пример изображения",
+            "externalValue": "https://wikimeat.storage.yandexcloud.net/d/de/%D0%92%D0%BA%D1%83%D1%81%D0%92%D0%B8%D0%BB%D0%BB.png"
+          }
+        }
+      },
+      "shops": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/shop"
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
